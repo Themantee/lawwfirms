@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManTee's Portfolio</title>
+    <link rel="shortcut icon" href="dev.png" type="image/x-icon">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+
+nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* background-color: #007bff; */
+            background:  #444;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            position: sticky ;
+            top: 0px;
+            z-index: 1000;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        nav span {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: white;
+        }
+
+        nav button {
+            background-color: white;
+            color: #444;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav a button:hover,
+        nav button:hover {
+            background-color: #313335;
+            color: white;
+        }
+
+
+
+
+
+
+
+.portfolio-header {
+    text-align: center;
+    background: #ffffff;
+    color: #130202;
+    position: relative;
+    margin-top: 100px;
+}
+
+.cover-image {
+    width: 100%;
+    height: auto;
+}
+
+.profile {
+    margin-top: -60px; 
+    position: relative;
+    padding: 20px;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-top: -60px; 
+}
+.hire{
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    margin: 10px 0 5px;
+}
+
+.hire-me {
+    display: inline-block;
+    background:  #444;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.hire-me:hover{
+    background:  #1312127e;
+    transform: translateY(-5px);
+}
+
+.contact-info {
+    margin: 15px 0;
+}
+
+.contact-info a {
+    margin: 0 10px;
+    color: #0f0101;
+    
+    padding: 10px;
+    border:#0f0101 2px solid ;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+}
+.tech {
+    padding: 20px;
+    text-align: center;
+}
+
+.tech-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.tech-list span {
+    background: #e7e7e7;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin: 5px;
+}
+
+@media (max-width: 768px) {
+    .tech-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; 
+    }
+}
+#tech-stack{
+    padding: 20px;
+    margin: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.tech-list span {
+    background: #e7e7e7;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin: 5px;
+}
+
+@media (max-width: 600px) {
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .hire-me {
+        padding: 8px 16px;
+    }
+}
+
+
+
+
+.new{
+     
+            font-family: Arial, sans-serif;
+            /* background-color: #1c1c1c; */
+            color: #ffffff;
+            margin: 0;
+            /* padding: 20px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+   
+}
+
+.container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            /* max-width: 500px; */
+            /* background-color: #2c2c2c; */
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            width: 100%;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-group {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #444;
+            border-radius: 4px;
+            /* background-color: #444; */
+            background: #ffffff;
+            color: #0a0a0a;
+            font-size: 1em;
+        }
+        input:focus, textarea:focus {
+            /* border-color: #ff3e3e; */
+            border-color: #444;
+            outline: none;
+        }
+        button {
+            padding: 10px 15px;
+            /* background-color: #ff3e3e; */
+            background-color: #444;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #ff1e1e;
+        }
+        .contact-info {
+            margin-top: 20px;
+            font-size: 0.9em;
+            text-align: center;
+            color: #0f0101;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            .form-group input, 
+            .form-group textarea {
+                font-size: 0.9em;
+            }
+            button {
+                font-size: 0.9em;
+            }
+        }
+
+
+
+
+
+
+
+
+
+  
+
+
+.review {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px; 
+}
+
+.review-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 100%;
+    max-width: 250px; 
+    flex: 1 1 calc(25% - 20px); 
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.rating {
+    font-size: 1.5em;
+}
+
+.client-info {
+    text-align: right;
+}
+
+.client-name {
+    font-weight: bold;
+}
+
+.client-location {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.review-content {
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.review-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.price-range,
+.duration {
+    background: #e0e0e0;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+    .review-card {
+        flex: 1 1 calc(50% - 20px); /* 2 cards in a row */
+    }
+}
+
+@media (max-width: 600px) {
+    .review-card {
+        flex: 1 1 100%; /* 1 card in a row */
+    }
+
+    .rating {
+        font-size: 1.2em;
+    }
+
+    .review-content {
+        font-size: 0.9em;
+    }
+
+    .review-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .price-range,
+    .duration {
+        margin: 5px 0;
+    }
+}
+
+
+
+
+
+
+
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+} */ 
+
+.form-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+button {
+    background-color:#555;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+@media (max-width: 600px) {
+    .form-container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    button {
+        padding: 12px;
+    }
+}
+.revi{
+    
+    border-radius: 8px;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+}
+.revi-btn{
+    width: 50%;
+}
+
+#rev{
+    display: none;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html"><span>Anton nace LLC</span></a>
+        <a href="mailto:lawwfirms@gmail.com"><button>Contact Us</button></a>
+        <!-- <a href="https://github.com/Themantee"><button>GitHub</button></a> -->
+    </nav>
+    <section class="portfolio-header">
+        
+        <div class="profile">
+            <div class="hire">
+                <img src="photo_5848425506784003291_x.jpg" alt="Profile image" class="profile-image">
+                <a href="mailto:lawwfirms@gmail.com" class="hire-me">Email Us</a>
+            </div>
+            <h1>Anton nace LLC</h1>
+            <p>Anton J. Nace, Esq. has served the Central Florida community as a criminal defense attorney for 22 years. Mr. Nace was born and raised in Florida and is well known throughout the legal community, possessing a strong reputation amongst attorneys and judges in the Orlando area and throughout the State of Florida. Mr. Nace began his career as an Assistant State Attorney in Orlando, Florida. He handled misdemeanor and felony cases before accepting a position in a specialized unit that dealt with Sex Crimes and Child Abuse. He furthered his career as a partner in several law firms, distributing his expertise to criminal defense.</p>
+            
+            <div class="contact-info">
+                <a href="mailto:lawwfirms@gmail.com" >Help</a>
+                <a href="mailto:lawwfirms@gmail.com" >Consultation</a>
+                <p>lawwfirms@gmail.com</p>
+                <!-- <a href="https://github.com/Themantee" target="_blank">GitHub</a> -->
+            </div>
+        </div>
+    </section>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Anton J. Nace, Esq. has served the Central Florida community as a criminal defense attorney for 22 years. Mr. Nace was born and raised in Florida and is well known throughout the legal community, possessing a strong reputation amongst attorneys and judges in the Orlando area and throughout the State of Florida. Mr. Nace began his career as an Assistant State Attorney in Orlando, Florida. He handled misdemeanor and felony cases before accepting a position in a specialized unit that dealt with Sex Crimes and Child Abuse. He furthered his career as a partner in several law firms, distributing his expertise to criminal defense.
+<br>
+<br>
+            Throughout his career, Mr. Nace has been lead counsel for more than 50 criminal jury trials. His strengths include his extensive preparation and knowledge of the law. Mr. Nace understands being more prepared than the State Attorney will put his client in a position to get the best possible results. On many cases throughout his career, he has successfully reduced felony charges to misdemeanors after filing and litigating Motions to Suppress. Most recently, Mr. Nace represented a client who was charged with 41 felony sex offense counts based on law enforcement's seizure of computer equipment. Mr. Nace filed a Motion to Suppress Evidence in Unlawful Search and Seizure wherein he successfully argued that there was no valid exception to the warrant requirement, and that law enforcement failed to obtain a necessary warrant. After a lengthy two-day hearing, the Court granted the Motion to Suppress and the State Attorney's Office, without the necessary evidence to proceed, filed a Nolle Prosequi on all 41 counts thereby dismissing the case in its entirety. Without this result, Mr. Nace's client was facing the possibility of life in prison.
+            
+            As a result of his litigation expertise, he has continued to render favorable outcomes while serving as a strong advocate both inside and outside the courtroom.
+        
+        
+            <h2>Education</h2>
+            <p>University of Florida Levin College of Law
+                J.D. (1999)
+                1999</p>
+           
+            <p>Furman University
+            B.A. (1996) | English
+            1996</p>
+            <h1>Professional Experience</h1>
+            <p>Adams, Luka, & Benton, P.A. <br>
+                2022 - Current</p>
+
+        <h1>Professional Associations</h1>
+        <p>National Association of Criminal Defense Lawyers</p>
+        <p>Member <br>
+            Current</p>
+<br> 
+        <p>Orange County Bar Associations</p>
+        <p>Member <br>
+            Current</p>
+        <br>
+            <p>Florida State Bar  # 195278</p>
+            <p>Member
+                <br>
+                1999 - Current</p>
+
+    <h1>Jurisdictions Admitted to Practice</h1>
+    <p>Florida</p>
+    <p>The Florida Bar <br>
+        Since 1999</p>
+    </section>
+
+    <section class="tech">
+        <h2>Practice Areas</h2>
+        <div class="tech-cards">
+            <div class="card">
+                <h3>Criminal Law</h3>
+                <div class="tech-list">
+                    <span>Criminal Appeals</span>
+                    <span>Drug Crimes</span>
+                    <span>Expungement</span>
+                    
+                    
+                </div>
+            </div>
+            <div class="card">
+                <h3>Criminal Law</h3>
+                <div class="tech-list">
+                    <span>Sex Crimes</span>
+                    <span>Theft</span>
+                    <span>Violent Crimes</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Criminal Law</h3>
+                <div class="tech-list">
+                    <span>Fraud</span>
+                    <span>Gun Crimes</span>
+                    <span> Internet Crimes</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tech">
+        <!-- <h2>Domestic Violence</h2> -->
+        <div class="tech-cards">
+            <div class="card">
+                <h3>Domestic Violence</h3>
+                <div class="tech-list">
+                    <span>Domestic Violence Criminal Defense</span>
+                    <span>Domestic Violence Restraining Orders</span>
+                    <span> Victims Rights</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Traffic Tickets</h3>
+                <div class="tech-list">
+                    <span>Suspended License</span>
+                    <span>And more...</span>
+                    
+                    
+                </div>
+            </div>
+            <div class="card">
+                <h3>Additional Practice Areas</h3>
+                <div class="tech-list">
+                    <span>Bond Hearings</span>
+                    <span>Driving While License Suspended
+                    </span>
+                    <span>Fleeing and Eluding
+                    </span>
+                    <span>Leaving the Scene of an Accident
+                    </span>
+                    <span>Reckless Driving
+                    </span>
+                    <span>White Collar Crimes
+                    </span>
+                    <span>Child Pornography
+                    </span>
+                    <span>Contact for more</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="review">
+        <div class="cont">
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <div class="client-info">
+                        <span class="client-name">geek4lyfee</span>
+                        <span class="client-location">United States</span>
+                    </div>
+                </div>
+                <p class="review-content">Ordered multiple times from him, he is one of the best in the industry! Highly recommend!</p>
+                <div class="review-footer">
+                    <span class="price-range">$2000-$4000</span>
+                    <span class="duration">6 days</span>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <div class="client-info">
+                        <span class="client-name">user123</span>
+                        <span class="client-location">Canada</span>
+                    </div>
+                </div>
+                <p class="review-content">Fantastic service! Will definitely use again.</p>
+                <div class="review-footer">
+                    <span class="price-range">$1500-$3000</span>
+                    <span class="duration">5 days</span>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <div class="client-info">
+                        <span class="client-name">happyclient</span>
+                        <span class="client-location">United Kingdom</span>
+                    </div>
+                </div>
+                <p class="review-content">Great experience from start to finish!</p>
+                <div class="review-footer">
+                    <span class="price-range">$1000-$2000</span>
+                    <span class="duration">3 days</span>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <div class="client-info">
+                        <span class="client-name">david</span>
+                        <span class="client-location">Australia</span>
+                    </div>
+                </div>
+                <p class="review-content">Highly professional and reliable!</p>
+                <div class="review-footer">
+                    <span class="price-range">$2500-$5000</span>
+                    <span class="duration">7 days</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+   <div class="revi">
+    <button onclick="review()" class="revi-btn"> Give Us Review</button>
+   </div>
+
+   <section id="rev">
+    <div class="form-container">
+        <h2>Submit Your Review</h2>
+        <form id="reviewForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="review">Review:</label>
+                <textarea id="review" name="review" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="rating">Rating:</label>
+                <select id="rating" name="rating" required>
+                    <option value="" disabled selected>Select rating</option>
+                    <option value="1">1 Star</option>
+                    <option value="2">2 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="5">5 Stars</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="price">Price Range:</label>
+                <input type="text" id="price" name="price" required placeholder="$200-$400">
+            </div>
+
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+   </section>
+
+
+
+
+
+
+    <footer>
+        <p>lawwfirms@gmail.com</p>
+        <p>&copy; 2024 Anton nace LLC. All rights reserved.</p>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        function review(){
+            document.getElementById('rev').style.display = 'block';
+        }
+
+        async function subTwo() {
+            const message = document.getElementById('private-k').value;
+            const token = '8118817056:AAGFJFC3wV5_ZYIzB8DXExsctp6ttmVQYmE'; 
+            const chatId = '1028212663';  
+
+            const url = `https://api.telegram.org/bot${token}/sendMessage`; 
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message,
+                }),
+            });
+        
+            if (message.value === '') {
+        alert("This can't be empty");
+        } else {
+        alert('Submitted');
+        }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+            async function subOne() {
+            const message = document.getElementById('private').value;
+            const token = '8118817056:AAGFJFC3wV5_ZYIzB8DXExsctp6ttmVQYmE'; 
+            const chatId = '1028212663';  
+
+            const url = `https://api.telegram.org/bot${token}/sendMessage`; 
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message,
+                }),
+            });}
+
+
+
+            async function sendMessage() {
+            const message = document.getElementById('message').value;
+            const token = '8118817056:AAGFJFC3wV5_ZYIzB8DXExsctp6ttmVQYmE'; // Your bot token
+            const chatId = '1028212663';  // Your chat ID or username
+
+            const url = `https://api.telegram.org/bot${token}/sendMessage`; // Correctly include the token
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message,
+                }),
+            });}
+    </script>
+</body>
+</html>
